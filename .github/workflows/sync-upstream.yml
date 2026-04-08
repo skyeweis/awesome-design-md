@@ -1,0 +1,42 @@
+# Merges VoltAgent/awesome-design-md (main) into this repo's main and pushes.
+# Schedule: weekly. Manual: Actions → Sync upstream → Run workflow.
+# Local copy: run `git pull origin main` in this folder after a sync runs.
+
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Monday 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Merge upstream and push
+        env:
+          UPSTREAM_URL: https://github.com/VoltAgent/awesome-design-md.git
+        run: |
+          set -euo pipefail
+          git remote remove upstream 2>/dev/null || true
+          git remote add upstream "$UPSTREAM_URL"
+          git fetch upstream main
+          git checkout main
+          git merge upstream/main --no-edit
+          git push origin main
