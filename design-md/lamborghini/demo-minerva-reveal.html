@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MINERVA — Lamborghini design test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lambo-gold: #FFC000;
+      --dark-gold: #917300;
+      --pure-white: #FFFFFF;
+      --absolute-black: #000000;
+      --charcoal: #202020;
+      --dark-iron: #181818;
+      --ash: #7D7D7D;
+      --steel: #969696;
+      --cyan-pulse: #29ABE2;
+      --link-blue: #3860BE;
+      --teal-action: #1EAEDB;
+      --font-display: 'Oswald', 'Roboto', Helvetica Neue, Arial, sans-serif;
+      --font-body: 'Roboto', Helvetica Neue, Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--absolute-black);
+      color: var(--pure-white);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--link-blue); }
+
+    /* —— Nav (floating, no box) —— */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px clamp(24px, 4vw, 40px);
+      background: transparent;
+    }
+    .nav__menu {
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav__menu-icon {
+      width: 22px;
+      height: 2px;
+      background: var(--pure-white);
+      box-shadow: 0 6px 0 var(--pure-white), 0 -6px 0 var(--pure-white);
+    }
+    .nav__mark {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+    }
+    .nav__tools {
+      display: flex;
+      gap: 20px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* —— Hero —— */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px clamp(24px, 5vw, 48px) 80px;
+      position: relative;
+      background: var(--absolute-black);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 40%, rgba(255, 192, 0, 0.04) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .hero__eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.96px;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin-bottom: 16px;
+    }
+    .hero__title {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 12vw, 7.5rem);
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      max-width: 14ch;
+      margin-bottom: 20px;
+    }
+    .hero__lede {
+      position: relative;
+      z-index: 1;
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--ash);
+      max-width: 36ch;
+      margin-bottom: 40px;
+    }
+    .hero__actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 400;
+      border-radius: 0;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.14px;
+      transition: background 0.2s, opacity 0.2s, border-color 0.2s;
+    }
+    .btn--gold {
+      background: var(--lambo-gold);
+      color: var(--absolute-black);
+      padding: 16px 32px;
+    }
+    .btn--gold:hover { background: var(--dark-gold); }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--pure-white);
+      border: 1px solid var(--pure-white);
+      padding: 16px 28px;
+      font-size: 14.4px;
+      font-weight: 300;
+      opacity: 0.5;
+    }
+    .btn--ghost:hover {
+      background: var(--teal-action);
+      opacity: 0.7;
+      border-color: var(--teal-action);
+    }
+
+    /* Hex pause control */
+    .hero__controls {
+      position: absolute;
+      bottom: 48px;
+      right: clamp(24px, 5vw, 48px);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hex-btn {
+      width: 48px;
+      height: 48px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .hex-btn svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--pure-white);
+      stroke-width: 1.5;
+      fill: none;
+    }
+    .hero__progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--dark-iron);
+    }
+    .hero__progress-bar {
+      height: 100%;
+      width: 38%;
+      background: var(--pure-white);
+    }
+
+    /* —— Spec strip —— */
+    .strip {
+      border-top: 1px solid var(--charcoal);
+      border-bottom: 1px solid var(--charcoal);
+      background: var(--absolute-black);
+    }
+    .strip__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 32px;
+    }
+    .stat__value {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.38rem);
+      font-weight: 400;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .stat__value--cyan { color: var(--cyan-pulse); }
+    .stat__label {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.225px;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin-top: 8px;
+    }
+
+    /* —— Cards —— */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 40px 80px;
+    }
+    .section__head {
+      margin-bottom: 40px;
+    }
+    .section__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.15;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section__desc {
+      font-size: 16px;
+      color: var(--ash);
+      max-width: 60ch;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0;
+      border: 1px solid var(--charcoal);
+    }
+    .card {
+      background: var(--charcoal);
+      border: 1px solid var(--absolute-black);
+      padding: 32px 28px;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 0;
+    }
+    .card__tag {
+      display: inline-block;
+      background: var(--steel);
+      color: var(--pure-white);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 10px;
+      border-radius: 2px;
+      align-self: flex-start;
+      margin-bottom: 20px;
+    }
+    .card__title {
+      font-family: var(--font-display);
+      font-size: 27px;
+      font-weight: 400;
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .card__body {
+      font-size: 16px;
+      color: var(--ash);
+      line-height: 1.56;
+    }
+    .card__link {
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer {
+      padding: 32px 40px 48px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--ash);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" aria-label="Primary">
+    <div class="nav__menu">
+      <span class="nav__menu-icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </div>
+    <div class="nav__mark">Lamborghini</div>
+    <div class="nav__tools" aria-hidden="true">
+      <span title="Search">⌕</span>
+      <span title="Saved">♡</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="hero__eyebrow">Design system test · MINERVA</p>
+      <h1 id="hero-title" class="hero__title">Beyond the limit</h1>
+      <p class="hero__lede">
+        A single-page pass at the Lamborghini tokens: absolute black, gold-only primary actions,
+        ghost secondary, zero radius, uppercase display type.
+      </p>
+      <div class="hero__actions">
+        <button type="button" class="btn btn--gold">Discover more</button>
+        <button type="button" class="btn btn--ghost">Technical sheet</button>
+      </div>
+
+      <div class="hero__controls" aria-hidden="true">
+        <button type="button" class="hex-btn" aria-label="Pause">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" />
+            <line x1="42" y1="30" x2="42" y2="70" stroke-width="4" />
+            <line x1="58" y1="30" x2="58" y2="70" stroke-width="4" />
+          </svg>
+        </button>
+      </div>
+      <div class="hero__progress" aria-hidden="true">
+        <div class="hero__progress-bar"></div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="strip__inner">
+        <div class="stat">
+          <div class="stat__value">3.2<span style="font-size: 0.5em; vertical-align: super;">s</span></div>
+          <div class="stat__label">0–100 km/h</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value stat__value--cyan">825</div>
+          <div class="stat__label">CV · hybrid assist</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">350</div>
+          <div class="stat__label">km/h · top</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">V12</div>
+          <div class="stat__label">Longitudinal · rear</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="section-title">
+      <div class="section__head">
+        <h2 id="section-title" class="section__title">Engineered darkness</h2>
+        <p class="section__desc">
+          Charcoal panels sit one step above the void. Gold is reserved for the one action that moves you forward—everything else stays white, gray, or cyan for signal.
+        </p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="card__tag">Layer</span>
+          <div>
+            <h3 class="card__title">Decision architecture</h3>
+            <p class="card__body">Map judgment, constraints, and handoff so the machine stays accountable—not decorative.</p>
+          </div>
+          <a class="card__link" href="#">Read framework</a>
+        </article>
+        <article class="card">
+          <span class="card__tag">Surface</span>
+          <div>
+            <h3 class="card__title">Charcoal elevation</h3>
+            <p class="card__body">Depth here is a shift from #000000 to #202020—no drop shadows on a black stage.</p>
+          </div>
+          <a class="card__link" href="#">View tokens</a>
+        </article>
+        <article class="card">
+          <span class="card__tag">Motion</span>
+          <div>
+            <h3 class="card__title">Color-only feedback</h3>
+            <p class="card__body">Hover states change background or link blue—no scale tricks, per the design system guardrails.</p>
+          </div>
+          <a class="card__link" href="#">Open DESIGN.md</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    demo-minerva-reveal.html · inspired by design-md/lamborghini/DESIGN.md
+  </footer>
+</body>
+</html>
