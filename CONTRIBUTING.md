@@ -6,12 +6,6 @@ This repository is a curated collection of DESIGN.md files extracted from popula
 
 ## How to Contribute
 
-### Request a New Site
-
-To request a DESIGN.md for a website, [open an issue](https://github.com/VoltAgent/awesome-design-md/issues/new?template=design-md-request.yml) with the website URL.
-
-We receive many requests, and maintainer bandwidth is limited. Sponsor-backed requests are prioritized, consider supporting the project via [GitHub Sponsors](https://github.com/sponsors/VoltAgent) if you'd like faster turnaround.
-
 ### Improve an Existing DESIGN.md
 
 If you notice issues with an existing file:
@@ -22,6 +16,9 @@ If you notice issues with an existing file:
 4. Fix incorrect hex values, missing tokens, or weak descriptions
 5. Update the `preview.html` and `preview-dark.html` if your changes affect displayed tokens
 6. Open a PR with before/after rationale
+
+
+We cannot accept DESIGN.md pull requests to maintain the quality of the existing collection.
 
 ## License
 
