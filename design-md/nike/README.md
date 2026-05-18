@@ -1,4 +1,4 @@
-# Nike Inspired Design System
+# Nike Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/nike/design-md
 

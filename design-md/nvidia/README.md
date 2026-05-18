@@ -1,4 +1,4 @@
-# NVIDIA Inspired Design System
+# NVIDIA Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/nvidia/design-md
 

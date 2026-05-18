@@ -1,4 +1,4 @@
-# Starbucks Inspired Design System
+# Starbucks Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/starbucks/design-md
 

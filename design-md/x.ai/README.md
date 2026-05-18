@@ -1,4 +1,4 @@
-# xAI Inspired Design System
+# xAI Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/x.ai/design-md
 

@@ -1,4 +1,4 @@
-# Webflow Inspired Design System
+# Webflow Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/webflow/design-md
 

@@ -1,4 +1,4 @@
-# Mastercard Inspired Design System
+# Mastercard Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/mastercard/design-md
 

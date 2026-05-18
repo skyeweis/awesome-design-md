@@ -1,4 +1,4 @@
-# Binance Inspired Design System
+# Binance Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/binance/design-md
 

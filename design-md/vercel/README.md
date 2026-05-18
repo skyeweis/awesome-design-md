@@ -1,4 +1,4 @@
-# Vercel Inspired Design System
+# Vercel Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/vercel/design-md
 

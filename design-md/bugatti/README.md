@@ -1,4 +1,4 @@
-# Bugatti Inspired Design System
+# Bugatti Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/bugatti/design-md
 

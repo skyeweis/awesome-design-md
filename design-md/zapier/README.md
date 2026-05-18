@@ -1,4 +1,4 @@
-# Zapier Inspired Design System
+# Zapier Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/zapier/design-md
 

@@ -1,4 +1,4 @@
-# Framer Inspired Design System
+# Framer Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/framer/design-md
 

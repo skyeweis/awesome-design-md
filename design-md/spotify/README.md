@@ -1,4 +1,4 @@
-# Spotify Inspired Design System
+# Spotify Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/spotify/design-md
 

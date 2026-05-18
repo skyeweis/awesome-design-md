@@ -1,4 +1,4 @@
-# Playstation Inspired Design System
+# Playstation Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/playstation/design-md
 

@@ -1,4 +1,4 @@
-# Cal Inspired Design System
+# Cal Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/cal/design-md
 

@@ -1,4 +1,4 @@
-# Lovable Inspired Design System
+# Lovable Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/lovable/design-md
 

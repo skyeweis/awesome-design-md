@@ -1,4 +1,4 @@
-# Apple Inspired Design System
+# Apple Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/apple/design-md
 

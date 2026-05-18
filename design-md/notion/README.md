@@ -1,4 +1,4 @@
-# Notion Inspired Design System
+# Notion Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/notion/design-md
 

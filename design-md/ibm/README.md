@@ -1,4 +1,4 @@
-# IBM Inspired Design System
+# IBM Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/ibm/design-md
 

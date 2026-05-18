@@ -1,4 +1,4 @@
-# Shopify Inspired Design System
+# Shopify Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/shopify/design-md
 

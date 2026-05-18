@@ -1,4 +1,4 @@
-# Ollama Inspired Design System
+# Ollama Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/ollama/design-md
 

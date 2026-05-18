@@ -1,4 +1,4 @@
-# Raycast Inspired Design System
+# Raycast Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/raycast/design-md
 

@@ -1,4 +1,4 @@
-# Coinbase Inspired Design System
+# Coinbase Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/coinbase/design-md
 

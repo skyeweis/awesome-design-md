@@ -1,4 +1,4 @@
-# Pinterest Inspired Design System
+# Pinterest Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/pinterest/design-md
 

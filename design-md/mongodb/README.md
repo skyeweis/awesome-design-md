@@ -1,4 +1,4 @@
-# Mongodb Inspired Design System
+# Mongodb Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/mongodb/design-md
 

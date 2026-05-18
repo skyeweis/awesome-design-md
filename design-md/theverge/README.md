@@ -1,4 +1,4 @@
-# Theverge Inspired Design System
+# Theverge Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/theverge/design-md
 

@@ -1,4 +1,4 @@
-# Intercom Inspired Design System
+# Intercom Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/intercom/design-md
 

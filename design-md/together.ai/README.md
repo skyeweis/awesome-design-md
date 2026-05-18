@@ -1,4 +1,4 @@
-# Together AI Inspired Design System
+# Together AI Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/together.ai/design-md
 

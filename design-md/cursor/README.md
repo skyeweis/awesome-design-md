@@ -1,4 +1,4 @@
-# Cursor Inspired Design System
+# Cursor Inspired Design System Analysis
 
 Design system details have been moved to: https://getdesign.md/cursor/design-md
 
