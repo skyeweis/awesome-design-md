@@ -50,15 +50,13 @@ You can [request a DESIGN.md](https://getdesign.md/request) for specific website
 
 ## AI Design + Build Ecosystem Tools
 
-Tools, platforms, and services for designing and shipping web apps with AI.
 
- - If you're building AI agents in TypeScript, VoltAgent gives you tool use, memory, and multi-agent coordination out of the box.
+<br/>
 
-    <a href="https://github.com/VoltAgent/voltagent">
-    <img height="80" alt="voltagent-banner" src="https://github.com/user-attachments/assets/7196f50b-ca98-494c-8aa0-11e111c49f96" />
-    </a>
+<a href="https://launchkit.getdesign.md/">
+<img src="https://cdn.voltagent.dev/awesome-repo/launchkit-banner-3.png" alt="launchkit"  /><br/>
+</a>
 
- 
 <br/>
 
 <div align="center">
